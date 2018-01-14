@@ -1,0 +1,6 @@
+#!gbuild
+[Subproject]
+# todo:  make api for formatter
+# formatter.h
+src\formatter.c
+

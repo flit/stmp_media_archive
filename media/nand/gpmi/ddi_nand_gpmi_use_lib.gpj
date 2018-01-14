@@ -1,0 +1,3 @@
+#!gbuild
+[Subproject]
+$(CHIP_DEPENDENT_LIBDIR)\ddi_nand_gpmi.a

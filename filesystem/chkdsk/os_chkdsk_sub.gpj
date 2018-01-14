@@ -1,0 +1,9 @@
+#!gbuild
+[Subproject]
+src\BitIo.h
+src\chkdsk.h
+src\fatutils.h
+src\FatUtils.c
+src\BitIo.c
+src\chkdsk.c
+

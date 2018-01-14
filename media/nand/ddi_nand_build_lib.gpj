@@ -1,0 +1,125 @@
+#!gbuild
+[Library]
+	-Iinclude
+	-Iddi\include
+	-Iddi\dataDrive
+	-Iddi\media
+	-Iddi\systemDrive
+	-Iddi\common
+	-Iddi\mapper
+	-Ihal
+	-I$ROOT\drivers\media\common
+
+	# Force use of the C++ compiler.
+	-dotciscxx
+	# Put the compiler in Gnu mode so symbol attributes work.
+	-gnu
+
+#------------------------------------------------
+# Common
+#------------------------------------------------
+ddi\common\Block.cpp
+ddi\common\Block.h
+ddi\common\Page.cpp
+ddi\common\Page.h
+ddi\common\Metadata.cpp
+ddi\common\Metadata.h
+ddi\common\PageOrderMap.cpp
+ddi\common\PageOrderMap.h
+ddi\common\DeferredTask.cpp
+ddi\common\DeferredTask.h
+ddi\common\DdiNandLocker.h
+ddi\common\ddi_nand_ddi.h
+
+$ROOT\drivers\media\common\RedBlackTree.h
+$ROOT\drivers\media\common\RedBlackTree.cpp
+$ROOT\drivers\media\common\DoubleList.h
+$ROOT\drivers\media\common\DoubleList.cpp
+$ROOT\drivers\media\common\wlru.h
+$ROOT\drivers\media\common\wlru.cpp
+$ROOT\drivers\media\common\Taus88.h
+$ROOT\drivers\media\common\Taus88.cpp
+
+#------------------------------------------------
+# Media
+#------------------------------------------------
+ddi\media\ddi_nand_media.h
+ddi\media\ddi_nand_boot_blocks.h
+ddi\media\ddi_nand_fingerprints.h"
+ddi\media\ddi_nand_media_boot_blocks.h
+ddi\media\ddi_nand_media_allocate.c
+ddi\media\ddi_nand_media_discover.c
+ddi\media\ddi_nand_media_erase.c
+ddi\media\ddi_nand_media_get_info.c
+ddi\media\ddi_nand_media_init.c
+ddi\media\ddi_nand_media_boot_block_utils.c
+ddi\media\ddi_nand_media_find_bcbs.c
+ddi\media\ddi_nand_media_write_bcbs.c
+ddi\media\ddi_nand_media_shutdown.c
+ddi\media\ddi_nand_media_regions.c
+ddi\media\BadBlockTable.cpp
+ddi\media\BadBlockTable.h
+ddi\media\DiscoveredBadBlockTable.cpp
+ddi\media\DiscoveredBadBlockTable.h
+
+rom_support\ddi_nand_hamming_code_ecc.c
+rom_support\ddi_nand_hamming_code_ecc_new.c
+
+#------------------------------------------------
+# System Drive
+#------------------------------------------------
+ddi\systemDrive\ddi_nand_system_drive_init.c
+ddi\systemDrive\ddi_nand_system_drive_get_info.c
+ddi\systemDrive\ddi_nand_system_drive_set_info.c
+ddi\systemDrive\ddi_nand_system_drive_read_sector.c
+ddi\systemDrive\ddi_nand_system_drive_recover.c
+ddi\systemDrive\ddi_nand_system_drive_recover.h
+ddi\systemDrive\ddi_nand_system_drive_erase.c
+ddi\systemDrive\ddi_nand_system_drive_write_sector.c
+
+# This file should be in the RPC plugins library, but hostlink doesn't
+# link for some reason in that case. Once that is fixed, this file will
+# be removed from here.
+ddi\plugins\ddi_nand_system_drive_rpc_plugins.c
+
+#------------------------------------------------
+# Data Drive
+#------------------------------------------------
+ddi\dataDrive\ddi_nand_data_drive_init.c
+ddi\dataDrive\ddi_nand_data_drive_get_info.c
+ddi\dataDrive\ddi_nand_data_drive_set_info.c
+ddi\dataDrive\ddi_nand_data_drive_read_sector.c
+ddi\dataDrive\ddi_nand_data_drive_erase.c
+ddi\dataDrive\ddi_nand_ndd_flush.c
+ddi\dataDrive\ddi_nand_ndd_write_sector.c
+ddi\dataDrive\ddi_nand_nssm_get_entry.cpp
+ddi\dataDrive\NonsequentialSectorsMap.cpp
+ddi\dataDrive\NonsequentialSectorsMap.h
+ddi\dataDrive\NssmManager.cpp
+ddi\dataDrive\NssmManager.h
+ddi\dataDrive\VirtualBlock.cpp
+ddi\dataDrive\VirtualBlock.h
+ddi\dataDrive\MultiTransaction.cpp
+ddi\dataDrive\MultiTransaction.h
+
+#------------------------------------------------
+# Mapper
+#------------------------------------------------
+ddi\mapper\Mapper.cpp
+ddi\mapper\Mapper.h
+ddi\mapper\BlockAllocator.cpp
+ddi\mapper\BlockAllocator.h
+ddi\mapper\ddi_nand_mapper_zone_map_cache_lookup.c
+ddi\mapper\ddi_nand_mapper_get_info.c
+ddi\mapper\ZoneMapCache.cpp
+ddi\mapper\ZoneMapCache.h
+ddi\mapper\ZoneMapSectionPage.cpp
+ddi\mapper\ZoneMapSectionPage.h
+ddi\mapper\PhyMap.cpp
+ddi\mapper\PhyMap.h
+ddi\mapper\PersistentMap.cpp
+ddi\mapper\PersistentMap.h
+ddi\mapper\PersistentPhyMap.cpp
+ddi\mapper\PersistentPhyMap.h
+
+

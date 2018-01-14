@@ -1,0 +1,35 @@
+#!gbuild
+[Project]
+
+	# Turn on extra debugging
+	-DDEBUG_DDI_MMC
+	# Turn on trace buffer debugging
+	#-DDEBUG_TRACE
+	# Turn on serial number debugging
+	#-DDEBUG_SERIAL_NUM
+	
+# We don't need a no ThreadX library for now.
+# ddi_mmc_build_lib.gpj    [Library]
+#    -URTOS_THREADX
+#    -DPMI_STUBS
+#    -o ddi_mmc.a
+	
+#------------------------------
+# SDRAM variants
+#
+# Only for 3780 and 3700
+#------------------------------
+{isdefined(STMP378x) || isdefined(STMP37xx)} ddi_mmc_build_lib.gpj    [Library]
+	-DRTOS_THREADX
+	-UNO_SDRAM
+	-o ddi_mmc__tx_sdram.a
+	
+#------------------------------
+# No-SDRAM variants
+#
+# Only for 3770 and 3700/3710
+#------------------------------
+{isdefined(STMP377x) || isdefined(STMP37xx)} ddi_mmc_build_lib.gpj    [Library]
+	-DRTOS_THREADX
+	-DNO_SDRAM
+	-o ddi_mmc__tx_nosdram.a

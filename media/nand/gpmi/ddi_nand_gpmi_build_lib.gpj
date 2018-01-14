@@ -1,0 +1,23 @@
+#!gbuild
+[Library]
+	-I.
+
+	# Force use of the C++ compiler.
+	-dotciscxx
+	# Put the compiler in Gnu mode so symbol attributes work.
+	-gnu
+
+ddi_nand_gpmi.h
+ddi_nand_ecc.h
+ddi_nand_gpmi_dma.h
+src/ddi_nand_gpmi.cpp
+src/ddi_nand_gpmi_pmi.cpp
+src/ddi_nand_gpmi_dma_isr.cpp
+src/ddi_nand_gpmi_dma.cpp
+src/ddi_nand_ecc.cpp
+src/ddi_nand_ecc8.cpp
+src/ddi_nand_bch.cpp
+src/ddi_nand_gpmi_dma_components.cpp
+src/ddi_nand_gpmi_dma_descriptor_init.cpp
+# RPC functions
+nand_gpmi_rpc.gpj

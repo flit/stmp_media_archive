@@ -1,0 +1,21 @@
+#!gbuild
+[Library]
+	-I$ROOT\drivers\media\common
+	-gnu
+media_cache.h
+src\media_cache.cpp
+src\cacheutil.h
+src\cacheutil.cpp
+src\writesector.cpp
+src\flushsector.cpp
+src\readsector.cpp
+src\access_record.h
+src\access_record.cpp
+src\cache_statistics.h
+
+$ROOT\drivers\media\common\RedBlackTree.h
+$ROOT\drivers\media\common\RedBlackTree.cpp
+$ROOT\drivers\media\common\DoubleList.h
+$ROOT\drivers\media\common\DoubleList.cpp
+$ROOT\drivers\media\common\wlru.h
+$ROOT\drivers\media\common\wlru.cpp

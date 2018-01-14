@@ -1,0 +1,26 @@
+#!gbuild
+[Subproject]
+	-I..\..\include
+	-I..\dataDrive
+	-I..\media
+	-I..\systemDrive
+	-I..\include
+	-I..\common
+	-I..\mapper
+	-I..\..\hal
+	-I..\..\..\common
+
+	# Force use of the C++ compiler.
+	-dotciscxx
+	# Put the compiler in Gnu mode so symbol attributes work.
+	-gnu
+
+# API
+ddi_nand_data_drive_rpc_plugins.h
+ddi_nand_system_drive_plugins.h
+#ddi_nand_data_drive_rpc_local.h
+ddi_nand_system_drive_rpc_plugins_local.h
+
+# Plugins
+ddi_nand_data_drive_rpc_plugins.c
+ddi_nand_system_drive_rpc_plugins.c

@@ -1,0 +1,21 @@
+##
+## 37xx tests
+##
+
+#ddi_nand_hal_unit_test_37xx_top.gpj,../../../../../application/framework/basic_os/basic_os_top.tgpj,project_name=ddi_nand_hal_unit_test root=..\..\..\..\.. custom_output_dir=_37xx chip_37xx sdram debug (dev | customer, 37xx)
+
+##
+## 377x tests
+##
+
+ldl_nand_rw_stress_test_377x_top.gpj,../../../../application/framework/basic_os/basic_os_top.tgpj,project_name=ldl_nand_rw_stress_test root=..\..\..\.. custom_output_dir=_377x chip_377x !sdram debug (dev | customer, 377x)
+ldl_mmc_rw_stress_test_377x_top.gpj,../../../../application/framework/basic_os/basic_os_top.tgpj,project_name=ldl_mmc_rw_stress_test root=..\..\..\.. custom_output_dir=_377x chip_377x !sdram debug (dev | customer, 377x)
+
+##
+## 378x tests
+##
+
+ldl_nand_rw_stress_test_378x_top.gpj,../../../../application/framework/basic_os/basic_os_top.tgpj,project_name=ldl_nand_rw_stress_test root=..\..\..\.. custom_output_dir=_378x sdram_heap=1024K chip_378x sdram debug (dev | customer, 378x)
+# Note: setting heap size to 1024k which works for media up to 4GB.
+ldl_mmc_rw_stress_test_378x_top.gpj,../../../../application/framework/basic_os/basic_os_top.tgpj,project_name=ldl_mmc_rw_stress_test root=..\..\..\.. custom_output_dir=_378x sdram_heap=1024K chip_378x sdram debug (dev | customer, 378x)
+

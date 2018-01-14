@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<VisualStudioPropertySheet
+	ProjectType="Visual C++"
+	Version="8.00"
+	Name="os_resource"
+	InheritedPropertySheets="..\..\..\application\framework\Framework.vsprops"
+	>
+	<Tool
+		Name="VCCLCompilerTool"
+		AdditionalIncludeDirectories=""
+	/>
+	<UserMacro
+		Name="Root"
+		Value="../../.."
+	/>
+</VisualStudioPropertySheet>

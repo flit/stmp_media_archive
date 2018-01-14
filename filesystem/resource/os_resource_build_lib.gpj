@@ -1,0 +1,6 @@
+#!gbuild
+[Library]
+src\os_resource_api.c
+src\os_resource_init.c
+src\os_resource_internal.h
+include\os\os_resource_api.h

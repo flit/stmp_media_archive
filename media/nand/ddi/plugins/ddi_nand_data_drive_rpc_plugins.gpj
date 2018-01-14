@@ -1,0 +1,5 @@
+#!gbuild
+[Project]
+
+ddi_nand_data_drive_rpc_plugins_build_lib.gpj		[Subproject]
+#	-o ddi_nand_data_drive_rpc_plugins.o

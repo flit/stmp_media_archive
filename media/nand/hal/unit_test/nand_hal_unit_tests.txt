@@ -1,0 +1,19 @@
+##
+## 37xx tests
+##
+
+ddi_nand_hal_unit_test_37xx_top.gpj,../../../../../application/framework/basic_os/basic_os_top.tgpj,project_name=ddi_nand_hal_unit_test root=..\..\..\..\.. custom_output_dir=_37xx chip_37xx sdram debug (dev | customer, 37xx)
+
+##
+## 377x tests
+##
+
+ddi_nand_hal_unit_test_377x_top.gpj,../../../../../application/framework/basic_os/basic_os_top.tgpj,project_name=ddi_nand_hal_unit_test root=..\..\..\..\.. custom_output_dir=_377x chip_377x !sdram debug (dev | customer, 377x)
+
+##
+## 378x tests
+##
+
+ddi_nand_hal_unit_test_378x_top.gpj,../../../../../application/framework/basic_os/basic_os_top.tgpj,project_name=ddi_nand_hal_unit_test root=..\..\..\..\.. custom_output_dir=_378x chip_378x sdram debug (dev | customer, 378x)
+
+

@@ -1,0 +1,56 @@
+#!gbuild
+[Project]
+    -DMMC
+
+	#------------------------------
+	# Enable these to permit profiling in the LBA NAND driver.
+	# You need to have SDRAM to hold a profile buffer with significant size.
+	#------------------------------
+	#-DCMP_PROFILE_ENABLE
+    #-DENABLE_SDRAM_DEBUG_MEM
+
+	#------------------------------
+	# Enable this to activate still more diagnostics in the LBA NAND driver.
+	#------------------------------
+	#-DDDI_LBA_NAND_INSTRUMENTATION
+
+	#------------------------------
+    # Adds buffers and trace-code to observe LBA NAND DMA sequences.
+    # 
+    # "Define" this to add the aforementioned code.
+    # "un-Define" for normal circumstances, to remove the code.
+    # This option should not be defined for deliverable code, or even for common
+    # debug-builds.
+	#------------------------------
+	#-DDEBUG_DMA_TOUT=1
+
+#------------------------------
+# SDRAM variants
+#------------------------------
+ddi_lba_nand_build_lib.gpj		[Library]
+	-DRTOS_THREADX
+	-UNO_SDRAM
+	-o ddi_lba_nand.a
+
+# We don't need a non-ThreadX build at the moment.
+#
+# ddi_lba_nand_build_lib.gpj		[Library]
+# 	-URTOS_THREADX
+# 	-UNO_SDRAM
+# 	-o ddi_lba_nand__notx_sdram.a
+
+
+#------------------------------
+# No-SDRAM variants
+#------------------------------
+#ddi_lba_nand_build_lib.gpj		[Library]
+#	-DRTOS_THREADX
+#	-DNO_SDRAM
+#	-o ddi_lba_nand__tx_nosdram.a
+
+
+
+
+
+
+

@@ -1,0 +1,16 @@
+#!gbuild
+[Program]
+	-object_dir=$OUTDIR\os_fs\objs
+	:binDir=$OUTDIR\os_fs
+	:passThrough=-I$ROOT\os\filesystem\fat\include
+	:passThrough=-I$ROOT\os\filesystem\include
+	:passThrough=-I$ROOT\include\os
+$LDFILE		[Linker Directives]
+src\fs_chkdsk_test.c
+os\filesystem\fat\fs_fat_memory.c
+$ROOT\stub\os_rsc_stub.c
+	-DDRIVELETTERS="abc"
+$MEDIA_DEFINITION		[C]
+projects\test\system_tests\system_test_01\common\src\host_interface\pmi_state_table_host.c
+$ROOT\drivers\media\DDILDL\ddi_ldl.gpj
+

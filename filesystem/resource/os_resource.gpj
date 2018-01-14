@@ -1,0 +1,4 @@
+#!gbuild
+[Project]
+os_resource_build_lib.gpj		[Library]
+	-o os_resource.a

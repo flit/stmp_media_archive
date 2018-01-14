@@ -1,0 +1,34 @@
+#!gbuild
+[Library]
+	-Isrc
+
+	# Force use of the C++ compiler.
+	-dotciscxx
+	# Put the compiler in Gnu mode so symbol attributes work.
+	-gnu
+
+# Common
+src/ddi_lba_nand_internal.h
+src/ddi_lba_nand_mbr.h
+
+# Media
+src/ddi_lba_nand_media.h
+src/ddi_lba_nand_media.cpp
+src/ddi_lba_nand_media_init.cpp
+src/ddi_lba_nand_media_util.cpp
+
+# Drive
+src/ddi_lba_nand_drive.h
+src/ddi_lba_nand_drive.cpp
+
+# HAL
+src/ddi_lba_nand_hal.h
+src/ddi_lba_nand_hal_internal.h
+src/ddi_lba_nand_hal.cpp
+src/ddi_lba_nand_hal_init.cpp
+
+# ROM support
+drivers/media/nand/rom_support/rom_nand_boot_blocks.h
+drivers/media/nand/rom_support/ddi_nand_hamming_code_ecc.c
+drivers/media/nand/rom_support/ddi_nand_hamming_code_ecc_new.c
+

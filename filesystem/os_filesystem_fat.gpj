@@ -1,0 +1,18 @@
+#!gbuild
+[Project]
+#	-DCWD_STRING
+	-arm_uk_asm
+
+# Thread-X variant
+os_filesystem_fat_build_lib.gpj		[Library]
+	-o os_filesystem_fat__tx.a
+	-DRTOS_THREADX
+	-UPMI_STUBS
+
+# Non-Thread-X variant
+#os_filesystem_fat_build_lib.gpj		[Library]
+#	-o os_filesystem_fat__notx.a
+#	-URTOS_THREADX
+#	-DPMI_STUBS
+
+

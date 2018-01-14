@@ -1,0 +1,12 @@
+#!gbuild
+[Project]
+# DO NOT change this into a library.
+# Libraries do not support the weak-linkage required by nand_hal_spy
+#
+	-I$ROOT\include\drivers
+#	-DCMP_PROFILE_ENABLE
+
+    # Output the .o files where we put the .a, just for this "library".
+	:outputDir=$(CHIP_DEPENDENT_LIBDIR)
+
+ddi_nand_hal_spy_build_lib.gpj		[Subproject]

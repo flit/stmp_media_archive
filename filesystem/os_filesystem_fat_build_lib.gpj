@@ -1,0 +1,8 @@
+#!gbuild
+[Library]
+	-I$ROOT\os\filesystem\include
+	-I$ROOT\os\filesystem\fat\include
+fat\os_fat_src.gpj		[Subproject]
+chkdsk\os_chkdsk_sub.gpj	[Subproject]
+formatter\os_formatter_sub.gpj	[Subproject]
+

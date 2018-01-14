@@ -1,0 +1,29 @@
+##
+## 37xx tests
+##
+
+
+#lba_hal_test_37xx_top.gpj,../../../../application/framework/basic_os/basic_os_top.tgpj,project_name=lba_hal_test root=..\..\..\.. custom_output_dir=_37xx chip_37xx sdram debug (dev | merge | qa, 37xx)
+
+#lba_hal_performance_test_37xx_top.gpj,../../../../application/framework/basic_os/basic_os_top.tgpj,project_name=lba_hal_performance_test root=..\..\..\.. custom_output_dir=_37xx chip_37xx sdram debug (dev | merge | qa, 37xx)
+
+#lba_ddi_media_test_37xx_top.gpj,../../../../application/framework/basic_os/basic_os_top.tgpj,project_name=lba_ddi_media_test root=..\..\..\.. custom_output_dir=_37xx chip_37xx sdram debug (dev | merge | qa, 37xx)
+
+#lba_ddi_pnp_test_37xx_top.gpj,../../../../application/framework/basic_os/basic_os_top.tgpj,project_name=lba_ddi_pnp_test root=..\..\..\.. custom_output_dir=_37xx chip_37xx !sdram debug (dev | merge | qa, 37xx)
+
+
+##
+## 378x tests
+##
+
+
+#lba_hal_test_378x_top.gpj,../../../../application/framework/basic_os/basic_os_top.tgpj,project_name=lba_hal_test root=..\..\..\.. custom_output_dir=_378x chip_378x sdram debug (dev | merge | qa, 378x)
+
+#lba_ddi_media_test_378x_top.gpj,../../../../application/framework/basic_os/basic_os_top.tgpj,project_name=lba_ddi_media_test root=..\..\..\.. custom_output_dir=_378x chip_378x sdram debug (dev | merge | qa, 378x)
+
+#lba_ddi_pnp_test_378x_top.gpj,../../../../application/framework/basic_os/basic_os_top.tgpj,project_name=lba_ddi_pnp_test root=..\..\..\.. custom_output_dir=_378x chip_378x sdram debug (dev | merge | qa, 378x)
+
+
+##
+## 377x tests - Can't have 377x tests until the tests will work without SDRAM.
+##

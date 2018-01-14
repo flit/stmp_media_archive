@@ -1,0 +1,39 @@
+#!gbuild
+[Project]
+    -UALLOW_BB_TABLE_READ_SKIP
+    -DNAND_READ_WEAR_LEVELING
+
+	#------------------------------
+	# Enable these to permit profiling in the NAND driver.
+	# You need to have SDRAM to hold a profile buffer with significant size.
+	#------------------------------
+	#-DCMP_PROFILE_ENABLE
+    #-DENABLE_SDRAM_DEBUG_MEM
+
+	#------------------------------
+	# Enable this to activate still more diagnostics in the NAND driver.
+	# This option was formerly known as "INSTRUMENTATION".
+	#------------------------------
+	#-DDDI_NAND_INSTRUMENTATION
+
+	#------------------------------
+    # Adds buffers and trace-code to observe NAND DMA sequences.
+    # 
+    # "Define" this to add the aforementioned code.
+    # "un-Define" for normal circumstances, to remove the code.
+    # This option should not be defined for deliverable code, or even for common
+    # debug-builds.
+	#------------------------------
+	#-DDEBUG_DMA_TOUT=1
+
+
+ddi_nand_hal_build_lib.gpj		[Library]
+	-DRTOS_THREADX
+	-o ddi_nand_hal.a
+
+
+
+
+
+
+

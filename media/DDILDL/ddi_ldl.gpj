@@ -1,0 +1,15 @@
+#!gbuild
+[Project]
+	-DLDL_STEERING
+
+# No-SDRAM variant.
+{isdefined(STMP377x) || isdefined(STMP37xx)} ddi_ldl_build_lib.gpj   [Library]
+    -o ddi_ldl__nosdram.a
+    -DNO_SDRAM
+
+# SDRAM variant.
+{isdefined(STMP378x) || isdefined(STMP37xx)} ddi_ldl_build_lib.gpj   [Library]
+    -o ddi_ldl__sdram.a
+    -UNO_SDRAM
+
+    

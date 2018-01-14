@@ -1,0 +1,9 @@
+#!gbuild
+[Subproject]
+ddi_nand_data_drive_rpc_plugins.h
+
+$(CHIP_DEPENDENT_LIBDIR)\ddi_nand_data_drive_rpc_plugins.o
+# Include the libs this one is dependant upon.
+components/telemetry/rpc/tss_rpc_use_lib.gpj    [Subproject]
+drivers/media/nand/ddi_nand_use_lib.gpj       [Subproject]
+

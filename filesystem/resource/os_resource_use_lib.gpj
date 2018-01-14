@@ -1,0 +1,3 @@
+#!gbuild
+[Subproject]
+$(CHIP_INDEPENDENT_LIBDIR)\os_resource.a

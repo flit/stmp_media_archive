@@ -1,0 +1,18 @@
+#!gbuild
+[Library]
+	# Force use of the C++ compiler.
+	-dotciscxx
+	# Put the compiler in Gnu mode so symbol attributes work.
+	-gnu
+
+ddi_mmc.h
+src\MmcMedia.h
+src\MmcDataDrive.h
+src\MmcSystemDrive.h
+src\TransferManager.h
+src\mbr_types.h
+src\mbr_util.cpp
+src\MmcMedia.cpp
+src\MmcDataDrive.cpp
+src\MmcSystemDrive.cpp
+src\TransferManager.cpp

@@ -1,0 +1,36 @@
+/*!
+\defgroup ddi_media_nand_hal_gpmi GPMI
+\ingroup ddi_nand
+\brief The GPMI hardware driver of the NAND HAL.
+
+The functions in this module manage the GPMI hardware block. This includes
+clock gating, timings, the interface to PMI, and similar functionality. One of
+the most important functions provided by this driver is the building and execution
+of DMA descriptors for sequences of commands sent to the NAND device.
+*/
+
+/*!
+\defgroup ddi_media_nand_hal_gpmi_internal GPMI internals
+\ingroup ddi_media_nand_hal_gpmi
+\brief The internals for the GPMI driver.
+*/
+
+/*!
+\defgroup ddi_media_nand_hal_ecc ECC
+\ingroup ddi_media_nand_hal_gpmi
+\brief The ECC subsystem of the GPMI driver.
+*/
+
+/*!
+\defgroup ddi_media_nand_hal_ecc_internal ECC internals
+\ingroup ddi_media_nand_hal_ecc
+\brief The internals for the ECC subsystem of the GPMI driver.
+*/
+
+/*!
+\defgroup ddi_media_nand_hal_dma DMA
+\ingroup ddi_media_nand_hal_gpmi
+\brief The DMA subsystem of the GPMI driver.
+
+*/
+

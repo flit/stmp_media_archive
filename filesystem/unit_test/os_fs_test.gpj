@@ -1,0 +1,22 @@
+#!gbuild
+[Program]
+	-object_dir=$OUTDIR\os_fs\objs
+	:binDir=$OUTDIR\os_fs
+	:passThrough=-I$ROOT\os\filesystem\fat\include
+	:passThrough=-I$ROOT\os\filesystem\include
+	:passThrough=-I$ROOT\include\os
+	-DPMI_STUBS
+$LDFILE		[Linker Directives]
+src\fs_fat_test.c
+os\filesystem\fat\fs_fat_memory.c
+$ROOT\stub\os_rsc_stub.c
+	-DDRIVELETTERS="abc"
+$MEDIA_DEFINITION		[C]
+#projects\test\system_tests\system_test_01\common\src\host_interface\pmi_state_table_host.c
+drivers\media\nand\hal\sync_objects\ddi_nand_hal_test_stubs.c
+hw\laserfuse\hw_lfi_use_lib.gpj
+hw\laserfuse\hw_lfi_private_use_lib.gpj
+os\filesystem\os_filesystem_fat_use_lib.gpj
+os\filesystem\os_filesystem_steering_use_lib.gpj
+drivers\media\nand\ddi_nand_use_lib.gpj
+drivers\media\DDILDL\ddi_ldl_use_lib.gpj

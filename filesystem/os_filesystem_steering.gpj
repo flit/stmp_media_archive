@@ -1,0 +1,6 @@
+#!gbuild
+[Project]
+os_filesystem_steering_build_lib.gpj		[Library]
+	-o os_filesystem_steering.a
+
+

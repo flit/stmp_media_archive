@@ -1,0 +1,42 @@
+#!gbuild
+[Library]
+	-Isrc
+
+	# Force use of the C++ compiler.
+	-dotciscxx
+	# Put the compiler in Gnu mode so symbol attributes work.
+	-gnu
+
+# Headers
+ddi_nand_hal.h
+ddi_nand_hal_rtos.h
+src/ddi_nand_hal_tables.h
+src/ddi_nand_hal_dma.h
+src/ddi_nand_hal_internal.h
+src/ddi_nand_hal_types.h
+
+# Common code and type identification.
+src/ddi_nand_hal_init.cpp
+src/ddi_nand_hal_tables.cpp
+src/ddi_nand_hal_common.cpp
+src/ddi_nand_hal_write.cpp
+src/ddi_nand_hal_read.cpp
+src/ddi_nand_hal_globals.cpp
+src/ddi_nand_hal_bad_block.cpp
+
+# Type definitions and type-specific code
+src/ddi_nand_hal_type8.cpp
+src/ddi_nand_hal_type11.cpp
+src/ddi_nand_hal_type16.cpp
+
+# ONFI stuff
+src/onfi_param_page.h
+src/onfi_param_page.cpp
+
+# Name table
+src/device_name_table.h
+src/device_name_table.cpp
+
+
+
+

@@ -1,0 +1,5 @@
+#!gbuild
+[Subproject]
+ddi_nand_hal_spy.h
+$(CHIP_DEPENDENT_LIBDIR)\ddi_nand_hal_spy.o
+$(CHIP_DEPENDENT_LIBDIR)\ddi_nand_hal_spy_rpc_plugins.o

@@ -1,0 +1,14 @@
+#!gbuild
+[Library]
+	-gnu
+	-I$ROOT\drivers\media\include
+../ddi_media.h
+../include/ddi_media_internal.h
+src/ddi_ldl_init.cpp
+src/ddi_ldl_read.cpp
+src/ddi_ldl_read_vmi.cpp
+src/ddi_ldl_write.cpp
+src/ddi_ldl_util.cpp
+src/ddi_ldl_drive_get_info.cpp
+src/ddi_ldl_iterator.cpp
+src/ddi_ldl_media_tasks.cpp

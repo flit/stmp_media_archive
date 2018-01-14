@@ -1,0 +1,40 @@
+#!gbuild
+[Subproject]
+
+# NAND driver sources
+#drivers\media\nand\ddi_nand_build_lib.gpj		[Library]
+drivers\media\nand\ddi_nand_use_lib.gpj		[Subproject]
+#drivers\media\nand\gpmi\ddi_nand_gpmi_use_lib.gpj		[Subproject]
+#drivers\media\nand\hal\ddi_nand_hal_use_lib.gpj		[Subproject]
+..\ddi_nand_media_definition.c		[C]
+
+# Other libraries
+drivers\media\DDILDL\ddi_ldl_use_lib.gpj		[Subproject]
+hw\otp\hw_otp_use_lib.gpj		[Subproject]
+hw\core\hw_core_use_lib.gpj		[Subproject]
+hw\profile\hw_profile_use_lib.gpj		[Subproject]
+hw\digctl\hw_digctl_use_lib.gpj		[Subproject]
+hw\lradc\hw_lradc_use_lib.gpj		[Subproject]
+drivers\clocks\ddi_clocks_use_lib.gpj		[Subproject]
+drivers\media\buffer_manager\media_buffer_manager_use_lib.gpj		[Subproject]
+drivers\media\cache\media_cache_use_lib.gpj		[Subproject]
+drivers\rtc\ddi_rtc_use_lib.gpj		[Subproject]
+os\dmi\os_dmi_use_lib.gpj		[Subproject]
+os\eoi\os_eoi_use_lib.gpj		[Subproject]
+os\thi\os_thi_use_lib.gpj		[Subproject]
+components\sb_info\cmp_sb_info_use_lib.gpj		[Subproject]
+#os\instrument\os_instrument_sub.gpj		[Subproject]
+$(ROOT)/components/sb_info/cmp_sb_info_use_lib.gpj		[Subproject]
+
+# Stubs
+stub\vmi-stub.c
+
+# Framework
+$(FRAMEWORK_PROJECT_DIR)\$(FRAMEWORK_PROJECT)		[Subproject]
+$OUTDIR\$(PROJECT_NAME).map
+
+# Sources
+src\nand_unit_test_helpers.cpp
+	-gnu
+$ROOT/os/dmi/src/os_dmi_malloc_free.c
+

@@ -1,0 +1,62 @@
+/*!
+\defgroup ddi_media_nand_hal NAND HAL
+\ingroup ddi_nand
+\brief The hardware abstraction layer for the NAND driver.
+
+The NAND HAL Interface provides an abstract, device-independent model of
+the underlying NAND hardware. Its API is presented primarily through instances of
+the NandPhysicalMedia class. Methods on this class allow callers to perform all of
+the standard NAND operations, such as reading and writing pages or erasing blocks.
+The NandPhysicalMedia objects each point to a common NandParameters_t structure
+that contains detailed information about the layout and size of the NAND device.
+
+Control of the HAL as a whole is provided through static members of the NandHal class.
+These include NandHal::init() and NandHal::shutdown(). There are also several functions
+to get information about chip selects and nands. Such as, NandHal::getChipSelectCount()
+to return the total number of active chip selects. Or NandHal::getNand(), which returns
+the NandPhysicalMedia object for a given chip select.
+
+When the HAL is initialized with a call to the NandHal::init() function, it scans
+for devices on the NAND bus and identifies and initialized every one it finds. Any
+number of devices up to the hardware maximum are supported (normally 4), but the chip enables
+must be consequetive from 0 through N.
+*/
+
+/*!
+\defgroup ddi_media_nand_hal_internals NAND HAL Internals
+\ingroup ddi_media_nand_hal
+\brief The internals of the NAND Hardware Abstraction Layer (HAL)
+*/
+
+/*!
+\defgroup ddi_media_nand_hal_spy Spy
+\ingroup ddi_media_nand_hal_internals
+\brief The behavior monitoring subsystem of the NAND HAL.
+
+NAND HAL SPY collects usage information for NAND hardware.  Specifically,
+it counts writes and reads to/from the NAND.  A big chunk of memory
+is needed to record these counts, so this is intended as a diagnostic tool
+and not a usual component of a deliverable application.
+
+Memory is statically allocated in SDRAM by ddi_nand_hal_spy.
+Simply linking ddi_nand_hal_spy causes the memory to be used up.
+
+NAND HAL SPY works by inserting function calls in between
+ddi_nand and the normal HAL API for the NAND chip.  SPY counts
+uses of the NAND hardware, and then invokes the original HAL API.
+The caller is none the wiser.
+
+Activate NAND HAL SPY like this:
+\code
+  if ( NULL != &ddi_nand_hal_spy_bIsLinked )
+  {
+    ddi_nand_hal_spy_Init( pNANDDescriptor,
+            50000,   // nReadWarningThreshold
+            5000);   // nEraseWarningThreshold
+  }
+\endcode
+
+SPY has weak linkage, so you can leave this code in place all the time.
+The code will not get invoked if SPY has not been linked.
+
+*/

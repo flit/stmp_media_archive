@@ -1,0 +1,3 @@
+#!gbuild
+[Subproject]
+$(CHIP_DEPENDENT_LIBDIR)\media_buffer_manager.a

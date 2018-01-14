@@ -1,0 +1,4 @@
+#!gbuild
+[Subproject]
+$(CHIP_INDEPENDENT_LIBDIR)\os_filesystem_fat__$(TX_NOTX).a
+

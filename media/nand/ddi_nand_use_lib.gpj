@@ -1,0 +1,7 @@
+#!gbuild
+[Subproject]
+$(CHIP_DEPENDENT_LIBDIR)\ddi_nand__$(TX_NOTX)_$(SDRAM_NOSDRAM).a
+
+# Include the libs this one is dependant upon.
+gpmi/ddi_nand_gpmi_use_lib.gpj       [Subproject]
+hal/ddi_nand_hal_use_lib.gpj       [Subproject]

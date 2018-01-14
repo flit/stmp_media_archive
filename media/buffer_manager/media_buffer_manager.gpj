@@ -1,0 +1,9 @@
+#!gbuild
+[Project]
+
+
+media_buffer_manager_build_lib.gpj		[Library]
+	-o media_buffer_manager.a
+
+
+

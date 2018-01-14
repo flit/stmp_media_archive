@@ -1,0 +1,35 @@
+/*!
+\defgroup ddi_lba_nand LBA NAND Driver
+\ingroup ddi_media
+\brief A media driver implementing the LDL interface for LBA-NAND devices.
+*/
+
+/*!
+\defgroup ddi_lba_nand_media Media Layer
+\ingroup ddi_lba_nand
+\brief The higher level driver layer for LBA-NAND devices.
+*/
+
+/*!
+\defgroup ddi_lba_nand_drive Drive Layer
+\ingroup ddi_lba_nand
+\brief Implementation of the LDL drive API set.
+*/
+
+/*!
+\defgroup ddi_media_lba_nand_hal LBA-NAND HAL
+\ingroup ddi_lba_nand
+\brief Hardware abstraction layer for LBA-NAND devices.
+
+The Hardware Abstraction Layer for the LBA-NAND driver provides a simple
+interface for higher level code to access each physical LBA device. The
+HAL is responsible for discovering and identifying each connected device,
+and generally interfacing with the GPMI driver. The public HAL interface
+consists of a single LbaNandPhysicalMedia object per physical device.
+*/
+
+/*!
+\defgroup ddi_media_lba_nand_hal_internal LBA-NAND HAL Internals
+\ingroup ddi_media_lba_nand_hal
+\brief Internal implementation of the LBA-NAND HAL.
+*/

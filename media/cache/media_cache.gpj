@@ -1,0 +1,9 @@
+#!gbuild
+[Project]
+
+media_cache_build_lib.gpj		[Library]
+	-o media_cache.a
+
+
+
+

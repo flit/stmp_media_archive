@@ -1,0 +1,7 @@
+#!gbuild
+[Library]
+	-I$ROOT\os\filesystem\include
+include\fs_steering.h
+steering\fs_steering.c
+steering\fs_steering_read.c
+steering\fs_steering_utility.c

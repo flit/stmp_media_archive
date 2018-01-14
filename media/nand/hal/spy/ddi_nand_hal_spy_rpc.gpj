@@ -1,0 +1,7 @@
+#!gbuild
+[Subproject]
+# API
+ddi_nand_hal_spy_rpc_plugins.h
+# Plugins
+plugins\ddi_nand_hal_spy_rpc_local.h
+plugins\ddi_nand_hal_spy_rpc_plugins.c

@@ -1,0 +1,19 @@
+#!gbuild
+[Subproject]
+# File: nand_gpmi_rpc.gpj
+#
+# Build-file for RPC plugin for component: nand_gpmi.
+# This file nominally belongs in the component's root directory.
+#
+# Instructions: To cause this to be built, list this .gpj file
+# in the "xxxx_build_lib.gpj" project for your component.
+
+    -Isrc
+    -I.
+
+# API
+nand_gpmi_rpc_plugins.h
+# Plugins
+src\nand_gpmi_rpc_local.h
+src\nand_gpmi_rpc_plugins.c
+

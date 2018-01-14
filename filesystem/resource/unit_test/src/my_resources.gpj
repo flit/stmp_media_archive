@@ -1,0 +1,14 @@
+#!gbuild
+[Resource Bundle]
+	-pv 003.015.083
+	-cv 008.003.081
+	-o firmware.rsc
+	-sz 2048
+res\icon_vol_00.bmp
+res\icon_vol_01.bmp
+res\spinner_00.bmp
+res\spinner_01.bmp
+res\battery_00.bmp
+res\battery_01.bmp
+res\font_stmp_8px.robj
+res\iso8859.robj

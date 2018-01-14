@@ -1,0 +1,9 @@
+//! \defgroup os_file File System
+//! \ingroup os
+//! API references for the FAT32 filesystem.
+
+//! \defgroup os_fat FAT File System
+//! \ingroup os_file
+
+//! \defgroup os_resource Resource Manager
+//! \ingroup os_file

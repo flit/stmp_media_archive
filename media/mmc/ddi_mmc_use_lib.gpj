@@ -1,0 +1,3 @@
+#!gbuild
+[Subproject]
+$(CHIP_DEPENDENT_LIBDIR)\ddi_mmc__$(TX_NOTX)_$(SDRAM_NOSDRAM).a

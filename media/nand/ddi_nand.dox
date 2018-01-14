@@ -1,0 +1,98 @@
+/*!
+\defgroup ddi_nand NAND Driver
+\ingroup ddi_media
+
+The NAND driver provides a simple, sector-oriented interface to NAND flash devices connected
+via the GPMI interface. It supports multiple partitions of several types, most importantly
+data drive and firmware (system) drive.
+
+The layer cake for the NAND driver looks like this:
+\code
++-----------------------+
+|      File System      | \
++-----------------------+  > Common to all media types
+|         LDL           | /
++-----------------------+
+|      Media Layer      | \
++-----------------------+  \
+|         HAL           |   > NAND driver layers
++-----------------------+  / 
+|      GPMI Driver      | /
++-----------------------+
+|      (Hardware)       |
++-----------------------+
+\endcode
+
+As you can see, the NAND driver is composed of three layers. These are the GPMI driver, the HAL,
+and the media layer. On top of the NAND driver sits the Logical Drive Layer (LDL) and file system.
+The LDL and file system are the same, regardless of which underlying media driver is used, such as
+NAND, LBA-NAND, or MMC/SD. The LDL provides the common interface to all media drivers at both its
+top and bottom edges.
+
+Briefly, the GPMI driver is simply a driver for the GPMI peripheral on the chip. It handles
+peripheral initialization and pin configuration, interaction with PMI (the power and clock
+management driver), and issuing and waiting for DMAs. It has a set of API functions for building
+DMA descriptors for every unique sequence of NAND commands issued at once.
+
+The Hardware Abstraction Layer (HAL) is both an abstraction layer for the chip hardware as well
+as an abstraction layer for the widely varying types of NAND devices supported by the driver.
+There is a single public class, NandPhysicalMedia, provided by the HAL that allows callers to
+perform operations on the NAND without worrying about the underlying commands and such.
+
+Finally, the media layer adds the high level algorithms to the NAND driver. It views the NAND
+as a set of contiguous regions that are combined to form drives (i.e., partitions). Within these
+drives it performs write leveling and read disturbance avoidance, while providing a common API
+through the LDL for reading and writing logical sectors. There are also functions to erase and
+format a NAND, deal with bad blocks, and everything else required to make a NAND look like a
+simple sector-oriented device.
+*/
+
+/*!
+\defgroup ddi_nand_media Media Layer
+\ingroup ddi_nand
+\brief Performs all high-level functions such as write leveling and partitioning.
+
+The media layer of the NAND driver is the highest slice in the driver's layer cake. It views the NAND
+as a set of contiguous regions that are combined to form drives (i.e., partitions). Within these
+drives it performs write leveling and read disturbance avoidance, while providing a common API
+through the LDL for reading and writing logical sectors. There are also functions to erase and
+format a NAND, deal with bad blocks, and everything else required to make a NAND look like a
+simple sector-oriented device.
+*/
+
+/*!
+\defgroup ddi_nand_data_drive Data Drive
+\ingroup ddi_nand_media
+
+*/
+
+/*!
+\defgroup ddi_nand_data_drive_lba LBA
+\ingroup ddi_nand_data_drive
+
+*/
+
+/*!
+\defgroup ddi_nand_mapper Logical to Physical Mapper
+\ingroup ddi_nand_media
+
+*/
+
+/*!
+\defgroup ddi_nand_system_drive System Drive
+\ingroup ddi_nand_media
+
+*/
+
+/*!
+\defgroup ddi_media_nand_ra RA Utilties
+\ingroup ddi_nand_media
+
+*/
+
+/*!
+\defgroup ddi_media_nand_ra_internals RA Utilties
+\ingroup ddi_media_nand_ra
+
+*/
+

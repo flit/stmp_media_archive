@@ -1,0 +1,7 @@
+
+
+//! \defgroup media_cache_internal Media Cache Internal
+//! \ingroup media_cache
+//! \brief Implementation details of the media cache.
+
+

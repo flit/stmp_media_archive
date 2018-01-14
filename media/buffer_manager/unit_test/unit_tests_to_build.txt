@@ -1,0 +1,4 @@
+
+# Buffer Manager Test
+buffer_manager_test_top.gpj (all_goals, 37xx),../../../../application/framework/basic_os/basic_os_top.tgpj,buffer_manager_test.cfg
+

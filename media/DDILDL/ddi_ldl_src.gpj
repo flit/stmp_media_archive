@@ -1,0 +1,9 @@
+#!gbuild
+[Subproject]
+	:passThrough=-I$ROOT\drivers\media\include
+ddi_ldl_write.c
+ddi_ldl_init.c
+ddi_ldl_read.c
+ddi_ldl_util.c
+ddi_ldl_timer_nontc.c
+ddi_ldl_timer_tc.c
